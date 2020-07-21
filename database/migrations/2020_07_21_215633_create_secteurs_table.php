@@ -13,7 +13,7 @@ class CreateSecteursTable extends Migration
      */
     public function up()
     {
-        Schema::create('secteur', function (Blueprint $table) {
+        Schema::create('secteurs', function (Blueprint $table) {
             $table->id();
             $table->string('nom_secteur');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateSecteursTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('secteur');
+        Schema::dropIfExists('secteurs');
     }
 }

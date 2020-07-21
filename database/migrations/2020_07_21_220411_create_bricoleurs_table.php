@@ -13,7 +13,7 @@ class CreateBricoleursTable extends Migration
      */
     public function up()
     {
-        Schema::create('bricoleur', function (Blueprint $table) {
+        Schema::create('bricoleurs', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
             $table->string('prenom');
@@ -24,7 +24,7 @@ class CreateBricoleursTable extends Migration
             $table->unsignedBigInteger('ville_id');
             $table->foreign('ville_id')->references('id')->on('villes');
             $table->unsignedBigInteger('secteur_id');
-            $table->foreign('secteur_id')->references('id')->on('secteur');
+            $table->foreign('secteur_id')->references('id')->on('secteurs');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('approuver');
@@ -39,6 +39,6 @@ class CreateBricoleursTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bricoleur');
+        Schema::dropIfExists('bricoleurs');
     }
 }
