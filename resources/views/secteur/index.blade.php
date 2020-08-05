@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -6,13 +10,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
   </head>
   <body class="bg-light">
-    <h2 class="text-secondary mb-5 text-center">Les Villes</h2>
+    <h2 class="text-secondary mb-5 text-center">Les Secteurs</h2>
     <ul class="mx-auto" style="width: 75vw;">
-      @foreach ($ville as $vill)
+      @foreach ($secteur as $sector)
       <li class="d-flex flex-row bd-highlight mb-3">
-        {{$vill->nom_ville}}
-        <a type="button" class="btn btn-warning ml-auto" href="{{url('/ville/'.$vill->id.'/edit')}}">Edit</a>
-        <form action="{{url('ville/'.$vill->id)}}" method="post">
+        {{$sector->nom_secteur}}
+        <a type="button" class="btn btn-warning ml-auto" href="{{url('/secteur/'.$sector->id.'/edit')}}">Edit</a>
+        <form action="{{url('secteur/'.$sector->id)}}" method="post">
           @csrf
           @method('DELETE')
           <button class="btn btn-danger mx-2" type="submit">Delete</button>

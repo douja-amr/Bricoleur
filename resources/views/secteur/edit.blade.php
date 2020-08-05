@@ -7,11 +7,11 @@
   </head>
   <body class="bg-light">
     <h2 class="text-secondary mt-5 text-center">Modifier un ville</h2>
-    <form class="" action="{{url('/ville/'.$ville->id)}}" method="post">
+    <form class="" action="{{url('/secteur/'.$secteur->id)}}" method="post">
       @csrf
       @method('PUT')
       <div class="input-group mx-auto" style="width: 500px; margin-top: 30vh">
-      <input class="form-control" type="text" name="nom_ville" value="{{$ville->nom_ville}}">
+      <input class="form-control" type="text" name="nom_secteur" value="{{$secteur->nom_secteur}}">
       <div class="input-group-append">
       <button class="btn btn-outline-secondary" type="submit">Modify</button>
     </div>
