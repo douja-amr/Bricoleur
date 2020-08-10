@@ -25,6 +25,8 @@ Route::get('/contact', function () {
 });
 Route::resource('/ville','VilleController');
 Route::resource('/secteur','SecteurController');
+Route::resource('/bricoleur','BricoleurController');
+
 
 
 // Route::get('/ville/create','VilleController@create');

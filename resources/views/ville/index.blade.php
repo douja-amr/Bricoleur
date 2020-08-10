@@ -20,5 +20,9 @@
       </li>
         @endforeach
     </ul>
+    <div class="text-center">
+
+      <a type="button" class="btn bg-secondary mt-3 px-5" href="{{url('ville/create')}}">Ajouter une ville</a>
+    </div>
   </body>
 </html>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Bricoleur;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class BricoleurController extends Controller
 {
@@ -14,7 +16,9 @@ class BricoleurController extends Controller
      */
     public function index()
     {
-        //
+      $bricol = Bricoleur::all();
+      return view('/bricoleur.index',['bricoleur'=>$bricol]);
+
     }
 
     /**
@@ -24,7 +28,11 @@ class BricoleurController extends Controller
      */
     public function create()
     {
-        //
+      // $val = DB::table('villes')->select('ville_id')->join('bricoleurs','villes.id','bricoleurs.ville_id')->get();
+      // $data = DB::table('villes')->select('nom_ville')->join('bricoleurs','villes.id','bricoleurs.ville_id')->get();
+
+
+        return view('bricoleur/create');
     }
 
     /**
@@ -35,7 +43,20 @@ class BricoleurController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $bricol = DB::table('bricoleur')
+                ->join('villes', 'bricoleurs.ville_id', '=', 'villes.id')
+                ->join('secteurs', 'bricoleurs.secteur_id', '=', 'secteurs.id')
+                ->join('users', 'bricoleurs.user_id', '=', 'users.id')
+                ->select('users.name','users.email', 'villes.nom_ville', 'secteurs.nom_secteur')
+                ->get();
+
+                $prmt = $request->except(['_token']);
+                $bricoleur = new Bricoleur();
+                $bricoleur->ville_id = $prmt['ville_id'];
+                $bricoleur->secteur_id = $prmt['secteur_id'];
+                $bricoleur->user_id = $prmt['user_id'];
+                $bricoleur->save();
+                return redirect('/bricoleur', compact('bricoleur', 'bricol'));
     }
 
     /**

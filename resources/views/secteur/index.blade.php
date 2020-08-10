@@ -1,12 +1,8 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Villes</title>
+    <title>Secteurs</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
   </head>
   <body class="bg-light">
@@ -24,5 +20,9 @@
       </li>
         @endforeach
     </ul>
+    <div class="text-center">
+
+      <a type="button" class="btn bg-secondary mt-3 px-5" href="{{url('secteur/create')}}">Ajouter un secteur</a>
+    </div>
   </body>
 </html>
