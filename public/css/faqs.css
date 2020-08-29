@@ -1,0 +1,131 @@
+@media (min-width: 1200px)
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1140px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.sidebar {
+    position: relative;
+    margin-right: 20px;
+    z-index: 2;
+}
+.mb-30 {
+    margin-bottom: 30px!important;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+.widget-help {
+    overflow: hidden;
+    padding: 50px;
+}
+.widget {
+    position: relative;
+    background-color: #f4f4f4;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+}
+.bg-theme {
+    background-color: #fe5a0e!important;
+}
+.widget:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: calc(100% - 80px);
+    height: 3px;
+    background-color: #fe5a0e;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.widget-help .widget__content {
+    position: relative;
+}
+.widget-help .widget__content h5 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 17px;
+}
+.widget-help .widget__content p {
+    color: #f9f9f9;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 26px;
+}
+.btn__link {
+    background-color: transparent;
+    border-color: transparent;
+    min-width: 0;
+    line-height: 1;
+    height: auto;
+    padding: 0;
+    border: none;
+}
+.btn__white {
+    /* background-color: #fff; */
+    color: #1b1a1a;
+}
+
+.widget-help:after {
+    content: "";
+    font-family: icomoon;
+    font-size: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    line-height: 1;
+    color: rgba(255,255,255,.1);
+}
+.accordion-item {
+    border: 2px solid #eaeaea;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 25px 30px;
+    margin-bottom: 27px;
+}
+.accordion-item .accordion__item-title {
+    font-family: Barlow,sans-serif;
+    color: #222;
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding-right: 25px;
+}
+.accordion-item .accordion__item-title:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    font-family: fontawesome;
+    background-color: transparent;
+    color: #1b1a1a;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 3px;
+}
+.collapse:not(.show) {
+    display: none;
+}

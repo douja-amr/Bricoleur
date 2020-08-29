@@ -24,3 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/ville','VilleController');
 
 // Route::get('/ville/create','VilleController@create');
+
+
+Route::get('/about', function () {
+    return view('about');
+});
