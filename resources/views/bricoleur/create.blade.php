@@ -14,13 +14,13 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">Nom</span>
           </div>
-          <input type="text" class="form-control" name="nom" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <input type="text" class="form-control" value="" name="nom" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">Prénom</span>
           </div>
-          <input type="text" class="form-control" name="prenom" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <input type="text" class="form-control" value="" name="prenom" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -40,10 +40,6 @@
           </div>
           <input type="text" class="form-control" name="email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
-
-
-
-
       <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroupFileAddon01">Image</span>
@@ -57,19 +53,34 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-default">Ville</span>
         </div>
-        <input type="text" class="form-control" name="ville_id" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <select class="custom-select" name="ville_id">
+          @foreach ($villes as $ville)
+
+          <option value="{{$ville->id}}">{{$ville->nom_ville}}</option>
+          @endforeach
+        </select>
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-default">Secteur</span>
         </div>
-        <input type="text" class="form-control" name="secteur_id" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <select class="custom-select" name="secteur_id">
+          @foreach ($secteurs as $sector)
+
+          <option value="{{$sector->id}}">{{$sector->nom_secteur}}</option>
+          @endforeach
+        </select>
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-default">User</span>
         </div>
-        <input type="text" class="form-control" name="user_id" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <select class="custom-select" name="user_id">
+          @foreach ($users as $usr)
+
+          <option value="{{$usr->id}}">{{$usr->name}}</option>
+          @endforeach
+        </select>
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -80,20 +91,6 @@
           <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Ajouter</button>
         </div>
       </div>
-
-
-
-      <select class="" name="ville_id">
-        @if ($bricol->count())
-        @foreach ($bricol as $bricolor)
-
-        <option value="{{$valu->villes.id}}">{{$valu->nom}}</option>
-        @endforeach
-        @endif
-      </select>
-
-
-
       </div>
     </form>
   </body>

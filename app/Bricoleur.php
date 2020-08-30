@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bricoleur extends Model
 {
-    protected $table = "bricoleur";
+    // protected $table = "bricoleurs";
+    //
+    // public function villes()
+    // {
+    //   return $this->belongsTo(Ville::class);
+    // }
 
 }

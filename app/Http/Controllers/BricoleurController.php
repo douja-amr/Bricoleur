@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Bricoleur;
+use App\User;
+use App\Ville;
+use App\Secteur;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -28,12 +31,23 @@ class BricoleurController extends Controller
      */
     public function create()
     {
-      // $val = DB::table('villes')->select('ville_id')->join('bricoleurs','villes.id','bricoleurs.ville_id')->get();
-      // $data = DB::table('villes')->select('nom_ville')->join('bricoleurs','villes.id','bricoleurs.ville_id')->get();
+      // $brico=Bricoleur::find($id);
+    //   $brico = DB::table('bricoleurs')
+    //             ->join('villes', 'villes.id', '=', 'bricoleurs.ville_id')
+    //             ->join('secteurs', 'secteurs.id', '=', 'bricoleurs.secteur_id')
+    //             ->join('users', 'users.id', '=', 'bricoleurs.user_id')
+    //             ->select('villes.*','secteurs.*','users.id','users.name','users.email')
+    //             ->get();
+    //     return view('bricoleur/create', compact('brico'));
+        $villes = Ville::all();
+        $bricol = Bricoleur::all();
+        $usrs = User::all();
+        $sectors = Secteur::all();
+        return view('bricoleur.create',['users' => $usrs , 'villes' => $villes , 'bricoleurs' => $bricol , 'secteurs' => $sectors]);
+     }
 
 
-        return view('bricoleur/create');
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -43,20 +57,22 @@ class BricoleurController extends Controller
      */
     public function store(Request $request)
     {
-      $bricol = DB::table('bricoleur')
-                ->join('villes', 'bricoleurs.ville_id', '=', 'villes.id')
-                ->join('secteurs', 'bricoleurs.secteur_id', '=', 'secteurs.id')
-                ->join('users', 'bricoleurs.user_id', '=', 'users.id')
-                ->select('users.name','users.email', 'villes.nom_ville', 'secteurs.nom_secteur')
-                ->get();
+
 
                 $prmt = $request->except(['_token']);
                 $bricoleur = new Bricoleur();
+                $bricoleur->nom = $prmt['nom'];
+                $bricoleur->prenom = $prmt['prenom'];
+                $bricoleur->telephone = $prmt['telephone'];
+                $bricoleur->CIN = $prmt['CIN'];
+                $bricoleur->email = $prmt['email'];
+                $bricoleur->image = $prmt['image'];
                 $bricoleur->ville_id = $prmt['ville_id'];
                 $bricoleur->secteur_id = $prmt['secteur_id'];
                 $bricoleur->user_id = $prmt['user_id'];
+                $bricoleur->approuver = $prmt['approuver'];
                 $bricoleur->save();
-                return redirect('/bricoleur', compact('bricoleur', 'bricol'));
+                return redirect('/bricoleur')->with('success', 'Add successfully');
     }
 
     /**
@@ -99,8 +115,10 @@ class BricoleurController extends Controller
      * @param  \App\Bricoleur  $bricoleur
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Bricoleur $bricoleur)
+    public function destroy($id)
     {
-        //
+      $bricoleur = Bricoleur::find($id);
+      $bricoleur->delete();
+      return redirect('/bricoleur');
     }
 }

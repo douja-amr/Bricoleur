@@ -40,7 +40,7 @@ class VilleController extends Controller
         $ville = new Ville();
         $ville->nom_ville = $prmtr['nom_ville'];
         $ville->save();
-        return redirect('/ville')->with('message', 'Add successfully');
+        return redirect('/ville')->with('success', 'Add successfully');
     }
 
     /**
