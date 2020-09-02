@@ -20,12 +20,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/contact', function () {
-    return view('contact');
-});
+// Route::resource('/contact', function () {
+//     return view('contact');
+// });
 Route::resource('/ville','VilleController');
 Route::resource('/secteur','SecteurController');
 Route::resource('/bricoleur','BricoleurController');
+Route::resource('/contact','ContactController');
 
 
 

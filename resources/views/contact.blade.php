@@ -59,7 +59,8 @@
 
               </div>
 
-              <form method="post" action="assets/php/contact.php" id="contactForm" class="contact__panel-form">
+              <form method="post" action="{{url('/contact')}}" id="contactForm" class="contact__panel-form">
+                @csrf
                 <div class="row">
                   <div class="col-sm-12">
                     <h4 class="contact__panel-title">Get In Touch</h4>
@@ -67,32 +68,32 @@
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="FirstName" id="contact-name" name="contact-name" required>
+                      <input type="text" class="form-control" placeholder="FirstName" id="contact-name" name="FirstName" required>
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="LastName" id="contact-subject" name="contact-subject" required>
+                      <input type="text" class="form-control" placeholder="LastName" id="contact-subject" name="LastName" required>
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="form-group">
-                      <input type="email" class="form-control" placeholder="Email" id="contact-email" name="contact-email" required>
+                      <input type="email" class="form-control" placeholder="Email" id="contact-email" name="contact_email" required>
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Phone" id="contact-Phone" name="contact-phone" required>
+                      <input type="text" class="form-control" placeholder="Phone" id="contact-Phone" name="contact_phone" required>
                     </div>
                   </div>
 
 
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="form-group">
-                      <textarea class="form-control" placeholder="Additional Details!" placeholder="Message" id="contact-messgae" name="contact-messgae" required></textarea>
+                      <textarea class="form-control" placeholder="Additional Details!" placeholder="Message" id="contact-messgae" name="contact_messgae" required></textarea>
                     </div>
                   </div>
 
