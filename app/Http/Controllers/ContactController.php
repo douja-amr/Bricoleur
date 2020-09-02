@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Ville;
+use App\contact;
 use Illuminate\Http\Request;
 
-class VilleController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class VilleController extends Controller
      */
     public function index()
     {
-        $ville = Ville::all();
-        return view('/ville.index',['ville'=>$ville]);
+      $contact = Contact::all();
+      return view('/contact',['contact'=>$contact]);
     }
 
     /**
@@ -25,7 +25,7 @@ class VilleController extends Controller
      */
     public function create()
     {
-        return view('ville/create');
+        return view('contact/create');
     }
 
     /**
@@ -36,20 +36,25 @@ class VilleController extends Controller
      */
     public function store(Request $request)
     {
-        $prmtr = $request->except(['_token']);
-        $ville = new Ville();
-        $ville->nom_ville = $prmtr['nom_ville'];
-        $ville->save();
-        return redirect('/ville')->with('message', 'Add successfully');
+      $prm = $request->except(['_token']);
+      $contact = new Contact();
+      $contact->FirstName = $prm['FirstName'];
+      $contact->LastName = $prm['LastName'];
+      $contact->contact_email = $prm['contact_email'];
+      $contact->contact_phone = $prm['contact_phone'];
+      $contact->contact_messgae = $prm['contact_messgae'];
+      $contact->save();
+      $message = "Message sent successfully";
+      return redirect('/contact')->withMessage($message);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Ville  $ville
+     * @param  \App\contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show(Ville $ville)
+    public function show(contact $contact)
     {
         //
     }
@@ -57,42 +62,34 @@ class VilleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Ville  $ville
+     * @param  \App\contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(contact $contact)
     {
-        $ville = Ville::find($id);
-        return view('ville.edit',['ville' => $ville]);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Ville  $ville
+     * @param  \App\contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, contact $contact)
     {
-      $ville = Ville::find($id);
-
-      $ville->nom_ville = $request['nom_ville'];
-      $ville->save();
-
-      return redirect('/ville');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Ville  $ville
+     * @param  \App\contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(contact $contact)
     {
-      $ville = Ville::find($id);
-      $ville->delete();
-      return redirect('/ville');
+        //
     }
 }

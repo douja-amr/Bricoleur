@@ -38,9 +38,21 @@
           <td>{{$bricolor->CIN}}</td>
           <td>{{$bricolor->email}}</td>
           <td>{{$bricolor->image}}</td>
-          <td>{{$bricolor->ville_id}}</td>
-          <td>{{$bricolor->secteur_id}}</td>
-          <td>{{$bricolor->user_id}}</td>
+          @foreach($villes as $ville)
+          @if($bricolor->ville_id == $ville->id)
+          <td>{{$ville->nom_ville}}</td>
+          @endif
+          @endforeach
+          @foreach($secteurs as $sector)
+          @if($bricolor->secteur_id == $sector->id)
+          <td>{{$sector->nom_secteur}}</td>
+          @endif
+          @endforeach
+          @foreach($users as $user)
+          @if($bricolor->user_id == $user->id)
+          <td>{{$user->name}}</td>
+          @endif
+          @endforeach
           <td>{{$bricolor->approuver}}</td>
           <td><a type="button" class="btn btn-warning ml-auto" href="{{url('/bricoleur/'.$bricolor->id.'/edit')}}">Edit</a></td>
           <td><form action="{{url('bricoleur/'.$bricolor->id)}}" method="post">
