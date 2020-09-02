@@ -6,11 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bricoleur extends Model
 {
-    // protected $table = "bricoleurs";
-    //
-    // public function villes()
-    // {
-    //   return $this->belongsTo(Ville::class);
-    // }
+    protected $table = "bricoleurs";
+    protected $fillable = ['image'];
 
 }
