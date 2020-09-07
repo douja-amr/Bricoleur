@@ -20,7 +20,7 @@ class CreateBricoleursTable extends Migration
             $table->string('telephone');
             $table->string('CIN');
             $table->string('email')->unique();
-            $table->binary('image');
+            $table->string('image')->nullable();
             $table->unsignedBigInteger('ville_id');
             $table->foreign('ville_id')->references('id')->on('villes');
             $table->unsignedBigInteger('secteur_id');
