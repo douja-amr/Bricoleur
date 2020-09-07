@@ -67,9 +67,8 @@ class BricoleurController extends Controller
                 $bricoleur->user_id = $prmt['user_id'];
                 $bricoleur->approuver = $prmt['approuver'];
                 if($request->hasFile('image')){
-                    $fileName = time().'_'.$request->file('image')->getClientOriginalName();
-                    $path = $request->file('image')->storeAs('uploads',$fileName,'public');
-                    $bricoleur->image= '/storage/' .$path;
+                    $path = $request->file('image')->store('bricoleurs');
+                    $bricoleur->image=$path;
                     }
                 $bricoleur->save();
                 return redirect('/bricoleur');
