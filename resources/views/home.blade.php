@@ -30,9 +30,7 @@
     <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
     <link rel="stylesheet" href="{{ asset('css/news.css') }}">
-    <!-- <link rel="stylesheet" href="{{ asset('css/all.css') }}"> -->
-     <!-- <link rel="stylesheet" href="{{ asset('css/libraries.css') }}"> 
-   -->
+   
 
 </head>
 
