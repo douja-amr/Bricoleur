@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Villes</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-  </head>
-  <body class="bg-light">
-    <h2 class="text-secondary mb-5 text-center">Les Villes</h2>
-    <ul class="mx-auto" style="width: 75vw;">
-      @foreach ($ville as $vill)
-      <li class="d-flex flex-row bd-highlight mb-3">
-        {{$vill->nom_ville}}
-        <a type="button" class="btn btn-warning ml-auto" href="{{url('/ville/'.$vill->id.'/edit')}}">Edit</a>
-        <form action="{{url('ville/'.$vill->id)}}" method="post">
-          @csrf
-          @method('DELETE')
-          <button class="btn btn-danger mx-2" type="submit">Delete</button>
-        </form>
-      </li>
-        @endforeach
-    </ul>
-    <div class="text-center">
+<html lang="en">
 
-      <a type="button" class="btn bg-secondary mt-3 px-5" href="{{url('ville/create')}}">Ajouter une ville</a>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/brico.css') }}">
+    
+</head>
+
+<body class="bg-light">
+<h2 class="text-secondary mb-5 text-center">the cities</h2>
+
+
+<div class="container">
+  @foreach ($ville as $vill)
+    <div>
+    {{$vill->nom_ville}}
     </div>
-  </body>
+    <div>
+    <a href="{{url('/ville/'.$vill->id.'/edit')}}">Edit</a>
+    </div>
+    <div>
+    <form action="{{url('ville/'.$vill->id)}}" method="post">
+      @csrf
+      @method('DELETE')
+      <button type="submit">Delete</button>
+    </form>
+    </div>
+    @endforeach
+
+</div>
+
+</body>
 </html>

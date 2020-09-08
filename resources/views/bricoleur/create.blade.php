@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <title>Create</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/brico.css') }}">
   </head>
-  <body class="bg-light">
+
+  <body>
+    <section class="bg">
     <h2 class="text-secondary mb-3 text-center">Ajouter un Bricoleur</h2>
-    <form action="{{url('/bricoleur')}}" method="post">
+    <form class="formul" action="{{url('/bricoleur')}}" method="post">
       @csrf
       <div class="input-group mx-auto" style="width: 500px; ">
         <div class="input-group mb-3">
@@ -77,7 +80,6 @@
         </div>
         <select class="custom-select" name="user_id">
           @foreach ($users as $usr)
-
           <option value="{{$usr->id}}">{{$usr->name}}</option>
           @endforeach
         </select>
@@ -93,5 +95,6 @@
       </div>
       </div>
     </form>
+  </section>
   </body>
 </html>

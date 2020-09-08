@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <title>Bricileurs</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/brico.css') }}">
   </head>
   <body class="bg-light">
     <h2 class="text-secondary mb-5 text-center">Les Bricoleurs</h2>
     <table class="table table-striped">
       <thead>
-        <tr>
-          <th scope="col">#</th>
+        <tr id="myth">
+          <th id="myth" scope="col">#</th>
           <th scope="col">nom</th>
           <th scope="col">prénom</th>
           <th scope="col">téléphone</th>
@@ -68,8 +69,8 @@
     </table>
 
     <div class="text-center">
-
-      <a type="button" class="btn bg-secondary mt-3 px-5" href="{{url('bricoleur/create')}}">Ajouter un bricoleur</a>
+      <a type="button" class="btn btnn bg-secondary mt-3 px-5" href="{{url('bricoleur/create')}}">Ajouter un bricoleur</a>
     </div>
+    <script src="{{ asset('js/secte.js') }}"></script>
   </body>
 </html>
