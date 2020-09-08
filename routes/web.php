@@ -29,3 +29,9 @@ Route::resource('/ville','VilleController');
 Route::get('/about', function () {
     return view('about');
 });
+Route::get('/faqs', function () {
+    return view('faqs');
+});
+
+
+
