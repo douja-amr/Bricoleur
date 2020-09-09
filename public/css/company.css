@@ -200,7 +200,7 @@ section {
 .mb-30 {
     margin-bottom: 30px!important;
 }
-.heading__subtitle {
+.heading__subtitle1 {
     position: relative;
     font-size: 15px;
     font-weight: 700;
@@ -208,7 +208,7 @@ section {
     display: block;
     margin-bottom: 10px;
 }
-.heading-layout2 .heading__subtitle:after {
+.heading-layout2 .heading__subtitle1:after {
     content: "";
     position: absolute;
     left: -50px;
@@ -223,10 +223,10 @@ section {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.heading-layout2 .heading__title {
+.heading-layout2 .heading__title1 {
     font-size: 40px;
 }
-.heading__title {
+.heading__title1 {
     position: relative;
     font-size: 34px;
     margin-bottom: 20px;
@@ -562,13 +562,13 @@ about-layout2 .video__box .video__btn {
 .mb-40 {
     margin-bottom: 40px!important;
 }
-.heading-light .heading__desc, .heading-light .heading__title {
+.heading-light .heading__desc, .heading-light .heading__title1 {
     color: #fff;
 }
-.heading-layout2 .heading__title {
+.heading-layout2 .heading__title1 {
     font-size: 40px;
 }
-.heading__title {
+.heading__title1 {
     position: relative;
     font-size: 34px;
     margin-bottom: 20px;
@@ -578,7 +578,7 @@ about-layout2 .video__box .video__btn {
     line-height: 27px;
     font-weight: 600;
 }
-.heading-light .heading__desc, .heading-light .heading__title {
+.heading-light .heading__desc, .heading-light .heading__title1 {
     color: #fff;
 }
 .heading__desc {
@@ -650,7 +650,7 @@ about-layout2 .video__box .video__btn {
     display: block;
     margin-bottom: 10px;
 }
-.heading__title {
+.heading__title1 {
     position: relative;
     font-size: 34px;
     margin-bottom: 20px;
@@ -711,11 +711,11 @@ about-layout2 .video__box .video__btn {
     z-index: -1;
     background-color: rgba(27,26,26,.15);
 }
-.heading-light .heading__subtitle {
+.heading-light .heading__subtitle1 {
     color: #f9f9f9;
 }
 
-.heading__subtitle {
+.heading__subtitle1 {
     position: relative;
     font-size: 15px;
     font-weight: 700;
@@ -723,10 +723,10 @@ about-layout2 .video__box .video__btn {
     display: block;
     margin-bottom: 10px;
 }
-.heading-light .heading__subtitle:after {
+.heading-light .heading__subtitle1:after {
     background-color: #fff;
 }
-.heading-layout2 .heading__subtitle:after {
+.heading-layout2 .heading__subtitle1:after {
     content: "";
     position: absolute;
     left: -50px;
@@ -741,10 +741,10 @@ about-layout2 .video__box .video__btn {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.heading-layout2 .heading__title {
+.heading-layout2 .heading__title1 {
     font-size: 40px;
 }
-.heading__title {
+.heading__title1 {
     position: relative;
     font-size: 34px;
     margin-bottom: 20px;
@@ -1098,10 +1098,10 @@ button, input, optgroup, select, textarea {
     height: 3px;
     background-color: #fe5a0e;
 }
-.testimonials .heading__title {
+.testimonials .heading__title1 {
     font-size: 15px;
 }
-.heading__title {
+.heading__title1 {
     position: relative;
     font-size: 34px;
     margin-bottom: 20px;
@@ -1345,10 +1345,10 @@ button, input, optgroup, select, textarea {
 .mb-50 {
     margin-bottom: 50px!important;
 }
-.heading-light .heading__subtitle {
+.heading-light .heading__subtitle1 {
     color: #f9f9f9;
 }
-.heading__subtitle {
+.heading__subtitle1 {
     position: relative;
     font-size: 15px;
     font-weight: 700;
@@ -1356,10 +1356,10 @@ button, input, optgroup, select, textarea {
     display: block;
     margin-bottom: 10px;
 }
-.heading-light .heading__subtitle:after {
+.heading-light .heading__subtitle1:after {
     background-color: #fff;
 }
-.heading-layout2 .heading__subtitle:after {
+.heading-layout2 .heading__subtitle1:after {
     content: "";
     position: absolute;
     left: -50px;
@@ -1374,13 +1374,13 @@ button, input, optgroup, select, textarea {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.heading-light .heading__desc, .heading-light .heading__title {
+.heading-light .heading__desc, .heading-light .heading__title1 {
     color: #fff;
 }
-.heading-layout2 .heading__title {
+.heading-layout2 .heading__title1 {
     font-size: 40px;
 }
-.heading__title {
+.heading__title1 {
     position: relative;
     font-size: 34px;
     margin-bottom: 20px;
