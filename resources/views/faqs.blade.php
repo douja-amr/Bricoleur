@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/faqs.css')}}">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/company.css')}}">
   </head>
   <body>
@@ -17,8 +18,6 @@
           <div class="loading"><span></span><span></span><span></span><span></span></div>
         </div><!-- /.preloader -->
       
-        
-    
         <!-- ======================
            FAQ
         ========================= -->
@@ -32,20 +31,20 @@
                       <h5>Dedicated Customer Teams & Agile Services</h5>
                       <p>Today Promin has over 4,000 professionals on its payroll All Over The World.</p>
                       <a href="request-quote.html" class="btn btn__white btn__link">
-                        <span class="color-white">Get A Quote</span> <i class="icon-arrow-right"></i>
+                        <span class="color-white">Get A Quote</span>
                       </a>
                     </div><!-- /.widget-download -->
                   </div><!-- /.widget-help -->
                   <div class="widget widget-download">
                     <h5 class="widget__title">Download</h5>
                     <div class="widget__content">
-                      <a href="#" class="btn btn__primary btn__block mb-20">
+                    <a href="#" class="btn btn__primary btn__block mb-20">
                         <span>Company Report 2020</span>
-                        <img src="{{asset('images/icons/pdf.png')}} " alt="pdf">
+                        <img class="icn" src="{{asset('images/icones/pdf.png')}}" alt="pdf">
                       </a>
                       <a href="#" class="btn btn__secondary btn__block btn__hover3">
                         <span>Company Brochure</span>
-                        <img src="{{asset('images/icons/pdf.png')}} " alt="pdf">
+                        <img class="icn1" src="{{asset('images/icones/pdf.png')}}" alt="pdf">
                       </a>
                     </div><!-- /.widget-content -->
                   </div><!-- /.widget-download -->
@@ -54,95 +53,55 @@
               <div id="accordion" class="col-sm-12 col-md-12 col-lg-8">
                 <div class="accordion-item">
                   <div class="accordion__item-header" data-toggle="collapse" data-target="#collapse1">
-                    <a class="accordion__item-title" href="#">Which Plan Is Right For Me?</a>
+                    <a class="accordion__item-title" href="#">How do our DIY services work?</a>
                   </div><!-- /.accordion-item-header -->
                   <div id="collapse1" class="collapse" data-parent="#accordion">
                     <div class="accordion__item-body">
-                      <p>With any financial product that you buy, it is important that you know you are getting the best
-                        advice from a reputable company as often</p>
+                      <p>1__Request a service <br> 2__Choose your city <br> 3__Smile, it's done!</p>
                     </div><!-- /.accordion-item-body -->
                   </div>
                 </div><!-- /.accordion-item -->
                 <div class="accordion-item">
                   <div class="accordion__item-header" data-toggle="collapse" data-target="#collapse2">
-                    <a class="accordion__item-title" href="#">Do I have to commit to a contract?</a>
+                    
+                  <a class="accordion__item-title" href="#">What do-it-yourself work at home can be entrusted to Bricoleur?</a>
                   </div><!-- /.accordion-item-header -->
                   <div id="collapse2" class="collapse" data-parent="#accordion">
                     <div class="accordion__item-body">
-                      <p>With any financial product that you buy, it is important that you know you are getting the best
-                        advice from a reputable company as often</p>
+                      <p>No more worrying, by calling on one of our jobeurs for your small DIY jobs, you are guaranteed to see your mission carried out in just a few hours by a handyman available, reliable and competent.</p>
                     </div><!-- /.accordion-item-body -->
                   </div>
                 </div><!-- /.accordion-item -->
                 <div class="accordion-item opened">
                   <div class="accordion__item-header" data-toggle="collapse" data-target="#collapse3">
-                    <a class="accordion__item-title" href="#">What Payment Methods Are Available?</a>
+                    <a class="accordion__item-title" href="#">What is your goal for this site?</a>
                   </div><!-- /.accordion-item-header -->
                   <div id="collapse3" class="collapse show" data-parent="#accordion">
                     <div class="accordion__item-body">
-                      <p>With any financial product that you buy, it is important that you know you are getting the best
-                        advice from a reputable company as often</p>
+                      <p>Our goal is to bring our customers closer to you and to keep everyone happy. Our clients are the best team of dedicated experts</p>
                     </div><!-- /.accordion-item-body -->
                   </div>
                 </div><!-- /.accordion-item -->
                 <div class="accordion-item">
                   <div class="accordion__item-header" data-toggle="collapse" data-target="#collapse4">
-                    <a class="accordion__item-title" href="#">What if I pick the wrong plan?</a>
+                    <a class="accordion__item-title" href="#">Do you intend to add other services to the site?</a>
                   </div><!-- /.accordion-item-header -->
                   <div id="collapse4" class="collapse" data-parent="#accordion">
                     <div class="accordion__item-body">
-                      <p>With any financial product that you buy, it is important that you know you are getting the best
-                        advice from a reputable company as often</p>
+                      <p>We can do this in the future depending on the needs of our website visitors</p>
                     </div><!-- /.accordion-item-body -->
                   </div>
                 </div><!-- /.accordion-item -->
                 <div class="accordion-item">
                   <div class="accordion__item-header" data-toggle="collapse" data-target="#collapse5">
-                    <a class="accordion__item-title" href="#">Any contracts or commitments?</a>
+                    <a class="accordion__item-title" href="#">Any contracts or obligations?</a>
                   </div><!-- /.accordion-item-header -->
                   <div id="collapse5" class="collapse" data-parent="#accordion">
                     <div class="accordion__item-body">
-                      <p>With any financial product that you buy, it is important that you know you are getting the best
-                        advice from a reputable company as often</p>
+                      <p>You don't need any of this.You only have to contact the worker and understand him about the work and the price of the service</p>
                     </div><!-- /.accordion-item-body -->
                   </div>
-                </div><!-- /.accordion-item -->
-                <div class="accordion-item">
-                  <div class="accordion__item-header" data-toggle="collapse" data-target="#collapse6">
-                    <a class="accordion__item-title" href="#">What are my payment options?</a>
-                  </div><!-- /.accordion-item-header -->
-                  <div id="collapse6" class="collapse" data-parent="#accordion">
-                    <div class="accordion__item-body">
-                      <p>With any financial product that you buy, it is important that you know you are getting the best
-                        advice from a reputable company as often</p>
-                    </div><!-- /.accordion-item-body -->
-                  </div>
-                </div><!-- /.accordion-item -->
-                <div class="accordion-item">
-                  <div class="accordion__item-header" data-toggle="collapse" data-target="#collapse7">
-                    <a class="accordion__item-title" href="#">How does the free trial work?</a>
-                  </div><!-- /.accordion-item-header -->
-                  <div id="collapse7" class="collapse" data-parent="#accordion">
-                    <div class="accordion__item-body">
-                      <p>With any financial product that you buy, it is important that you know you are getting the best
-                        advice from a reputable company as often</p>
-                    </div><!-- /.accordion-item-body -->
-                  </div>
-                </div><!-- /.accordion-item -->
-                <div class="accordion-item">
-                  <div class="accordion__item-header" data-toggle="collapse" data-target="#collapse8">
-                    <a class="accordion__item-title" href="#">What Payment Methods Are Available?</a>
-                  </div><!-- /.accordion-item-header -->
-                  <div id="collapse8" class="collapse" data-parent="#accordion">
-                    <div class="accordion__item-body">
-                      <p>With any financial product that you buy, it is important that you know you are getting the best
-                        advice from a reputable company as often</p>
-                    </div><!-- /.accordion-item-body -->
-                  </div>
-                </div><!-- /.accordion-item -->
-              </div><!-- /.col-lg-8 -->
-            </div><!-- /.row -->
-          </div><!-- /.container -->
+                </div>
         </section><!-- /.FAQ -->
     
     
@@ -150,7 +109,7 @@
           Footer
         ========================== -->
       
-        <button id="scrollTopBtn"><i class="fa fa-long-arrow-up"></i></button>
+       
     
       </div><!-- /.wrapper -->
 

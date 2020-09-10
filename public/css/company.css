@@ -13,6 +13,16 @@ body {
     color: #9b9b9b;
     overflow-x: hidden;
 }
+.icn{
+        margin-bottom: 4px;
+    position: sticky;
+    margin-left: 10px;
+}
+.icn1{
+    margin-bottom: 4px;
+    position: sticky;
+    margin-left: 32px;
+}
 .page-title {
     padding-top: 265px;
     padding-bottom: 150px;

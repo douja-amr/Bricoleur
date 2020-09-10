@@ -34,7 +34,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     padding: 50px;
 }
 .widget {
-    position: relative;
+    position: initial;
     background-color: #f4f4f4;
     padding: 40px;
     margin-bottom: 40px;
