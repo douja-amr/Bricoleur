@@ -54,22 +54,23 @@ class BricoleurController extends Controller
     public function store(Request $request)
     {
 
-                $prmt = $request->except(['_token']);
+                // $prmt = $request->except(['_token']);
                 $bricoleur = new Bricoleur();
-                $bricoleur->nom = $prmt['nom'];
-                $bricoleur->prenom = $prmt['prenom'];
-                $bricoleur->telephone = $prmt['telephone'];
-                $bricoleur->CIN = $prmt['CIN'];
-                $bricoleur->email = $prmt['email'];
+                $bricoleur->nom = $request['nom'];
+                $bricoleur->prenom = $request['prenom'];
+                $bricoleur->telephone = $request['telephone'];
+                $bricoleur->CIN = $request['CIN'];
+                $bricoleur->email = $request['email'];
                 // $bricoleur->image = $prmt['image'];
-                $bricoleur->ville_id = $prmt['ville_id'];
-                $bricoleur->secteur_id = $prmt['secteur_id'];
-                $bricoleur->user_id = $prmt['user_id'];
-                $bricoleur->approuver = $prmt['approuver'];
-                if($request->hasFile('image')){
-                    $path = $request->file('image')->store('bricoleurs');
+                $bricoleur->ville_id = $request['ville_id'];
+                $bricoleur->secteur_id = $request['secteur_id'];
+                $bricoleur->user_id = $request['user_id'];
+                $bricoleur->approuver = $request['approuver'];
+                if($request->hasFile('image'))
+                    $path = $request->file('image')->store('public');
                     $bricoleur->image=$path;
-                    }
+                    
+                
                 $bricoleur->save();
                 return redirect('/bricoleur');
     }
@@ -121,9 +122,10 @@ class BricoleurController extends Controller
       $bricol->email = $request->input('email');
       $bricol->approuver = $request->input('approuver');
      if($request->hasFile('image')){
-          $path = $request->file('image')->store('bricolers');
-          $bricol->image=$path;
+          $path = $request->file('image')->store('public');
+          
       }
+      $bricol->image=$path;
       $bricol->save();
       return redirect('bricoleur')->with('success','Bricoler update successfully');
     }

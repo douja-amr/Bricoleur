@@ -6,10 +6,10 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Promina - Construction And Building Template">
-    <link href="assets/images/favicon/favicon.png" rel="icon">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+    <meta name="description" content="Bricoleur">
+    <!-- <link href="assets/images/favicon/favicon.png" rel="icon"> -->
     <title>page secteur</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700%7cRoboto:400,500,700&display=swap">
     <!-- <link rel="stylesheet" href="assets/css/libraries.css"> -->
@@ -85,7 +85,7 @@
                         <div class="service-item">
                             <div class="service__content">
                                 <div class="service__icon">
-                                    <img class="fit-picture"  src="{{ asset('images/paint-roller.png')}}"  alt="icone">
+                                    <img class="fit-picture"  src="{{ asset('images/service/paint-roller.png')}}"  alt="icone">
                                 </div>
                                 <!-- /.service__icon -->
                                 <h4 class="service__title">Paint<br> & Floor</h4>
@@ -97,7 +97,7 @@
                             </div>
                             <!-- /.service-content -->
                             <div class="service__overlay bg-overlay bg-overlay-theme">
-                                <div class="bg-img"><img src="{{ asset('images/13.jpg')}}" alt="background"></div>
+                                <div class="bg-img"><img src="{{ asset('images/service/13.jpg')}}" alt="background"></div>
                             </div>
                             <!-- /.service__overlay -->
                         </div>
@@ -108,7 +108,7 @@
                         <div class="service-item">
                             <div class="service__content">
                                 <div class="service__icon">
-                                    <img class="fit-picture"  src="{{ asset('images/cleaning.png')}}"  alt="icone">
+                                    <img class="fit-picture"  src="{{ asset('images/service/cleaning.png')}}"  alt="icone">
                                 </div>
                                 <!-- /.service__icon -->
                                 <h4 class="service__title">Kitchen <br> & cleaning</h4>
@@ -122,7 +122,7 @@
                             </div>
                             <!-- /.service-content -->
                             <div class="service__overlay bg-overlay bg-overlay-theme">
-                                <div class="bg-img"><img src="{{ asset('images/13.jpg')}}" alt="background"></div>
+                                <div class="bg-img"><img src="{{ asset('images/service/13.jpg')}}" alt="background"></div>
                             </div>
                             <!-- /.service__overlay -->
                         </div>
@@ -133,7 +133,7 @@
                         <div class="service-item">
                             <div class="service__content">
                                 <div class="service__icon">
-                                <img class="fit-picture"  src="{{ asset('images/farming.png')}}"  alt="icone">
+                                <img class="fit-picture"  src="{{ asset('images/service/farming.png')}}"  alt="icone">
                                 </div>
                                 <!-- /.service__icon -->
                                 <h4 class="service__title">Outdoor <br> & gardener</h4>
@@ -146,7 +146,7 @@
                             </div>
                             <!-- /.service-content -->
                             <div class="service__overlay bg-overlay bg-overlay-theme">
-                                <div class="bg-img"><img src="{{ asset('images/13.jpg')}}" alt="background"></div>
+                                <div class="bg-img"><img src="{{ asset('images/service/13.jpg')}}" alt="background"></div>
                             </div>
                             <!-- /.service__overlay -->
                         </div>
@@ -157,7 +157,7 @@
                         <div class="service-item">
                             <div class="service__content">
                                 <div class="service__icon">
-                                    <img class="fit-picture"  src="{{ asset('images/electrician.png')}}"  alt="icone">
+                                    <img class="fit-picture"  src="{{ asset('images/service/electrician.png')}}"  alt="icone">
                                 </div>
                                 <!-- /.service__icon -->
                                 <h4 class="service__title">Electricity</h4>
@@ -169,7 +169,7 @@
                             </div>
                             <!-- /.service-content -->
                             <div class="service__overlay bg-overlay bg-overlay-theme">
-                                <div class="bg-img"><img src="{{ asset('images/13.jpg')}}" alt="background"></div>
+                                <div class="bg-img"><img src="{{ asset('images/service/13.jpg')}}" alt="background"></div>
                             </div>
                             <!-- /.service__overlay -->
                         </div>
@@ -180,7 +180,7 @@
                         <div class="service-item">
                             <div class="service__content">
                                 <div class="service__icon">
-                                    <img class="fit-picture"  src="{{ asset('images/tools.png')}}"  alt="icone">
+                                    <img class="fit-picture"  src="{{ asset('images/service/tools.png')}}"  alt="icone">
                                 </div>
                                 <!-- /.service__icon -->
                                 <h4 class="service__title">Plumbing</h4>
@@ -193,7 +193,7 @@
                             </div>
                             <!-- /.service-content -->
                             <div class="service__overlay bg-overlay bg-overlay-theme">
-                                <div class="bg-img"><img src="{{ asset('images/13.jpg')}}" alt="background"></div>
+                                <div class="bg-img"><img src="{{ asset('images/service/13.jpg')}}" alt="background"></div>
                             </div>
                             <!-- /.service__overlay -->
                         </div>
@@ -204,7 +204,7 @@
                         <div class="service-item">
                             <div class="service__content">
                                 <div class="service__icon">
-                                    <img class="fit-picture"  src="{{ asset('images/package.png')}}"  alt="icone">
+                                    <img class="fit-picture"  src="{{ asset('images/service/package.png')}}"  alt="icone">
                                 </div>
                                 <!-- /.service__icon -->
                                 <h4 class="service__title">Small Works</h4>
@@ -216,7 +216,7 @@
                             </div>
                             <!-- /.service-content -->
                             <div class="service__overlay bg-overlay bg-overlay-theme">
-                                <div class="bg-img"><img src="{{ asset('images/13.jpg')}}" alt="background"></div>
+                                <div class="bg-img"><img src="{{ asset('images/service/13.jpg')}}" alt="background"></div>
                             </div>
                             <!-- /.service__overlay -->
                         </div>
@@ -227,8 +227,8 @@
                 <!-- /.row -->
             </div>
             <div class="add">
-                    <a class="btn-add"type="button" href="{{url('secteur/create')}}">Add a category</a>
-                </div>
+                    <a class="btn-add"type="button" href="{{url('bricoleur/create')}}">Add A Handyman</a>
+            </div>
             <!-- /.container -->
         </section>
         <!-- /.Services Layout 1 -->

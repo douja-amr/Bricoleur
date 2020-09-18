@@ -7,70 +7,67 @@
     <link rel="stylesheet" href="{{ asset('css/brico.css') }}">
   </head>
   <body class="bg-light">
-    <h2 class="text-secondary mb-5 text-center">Les Bricoleurs</h2>
+    <h2 class="text-secondary mb-5 text-center">Our Handymen</h2>
     <table class="table table-striped">
       <thead>
         <tr id="myth">
-          <th id="myth" scope="col">#</th>
-          <th scope="col">nom</th>
-          <th scope="col">prénom</th>
-          <th scope="col">téléphone</th>
-          <th scope="col">CIN</th>
-          <th scope="col">émail</th>
+          
+          <th class="th" id="myth" scope="col">#</th>
           <th scope="col">image</th>
-          <th scope="col">ville_id</th>
-          <th scope="col">secteur_id</th>
-          <th scope="col">user_id</th>
-          <th scope="col">approuver</th>
+          <th scope="col">F Name</th>
+          <th scope="col">L Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">NIC</th>
+          <th scope="col">Email</th>
+          <th scope="col">City</th>
+          <th scope="col">Category</th>
+          <th scope="col">User</th>
+          <th scope="col">Approved</th>
           <th scope="col">Modifier</th>
-          <th scope="col">Suprimer</th>
-
-
+          <th scope="col">Delete</th>
         </tr>
       </thead>
       @foreach ($bricoleur as $bricolor)
-      <tbody>
+      <tbody class="list">
         <tr>
-
           <th scope="row">{{$bricolor->id}}</th>
-          <td>{{$bricolor->nom}}</td>
-          <td>{{$bricolor->prenom}}</td>
-          <td>{{$bricolor->telephone}}</td>
-          <td>{{$bricolor->CIN}}</td>
-          <td>{{$bricolor->email}}</td>
-          <td>{{$bricolor->image}}</td>
+          <td><img class="brico-img" src="{{Storage::disk('local')->url($bricolor->image)}}" alt=""></td>
+          <td class="th-info">{{$bricolor->nom}}</td>
+          <td class="th-info">{{$bricolor->prenom}}</td>
+          <td class="th-info">{{$bricolor->telephone}}</td>
+          <td class="th-info">{{$bricolor->CIN}}</td>
+          <td class="th-info">{{$bricolor->email}}</td>
+          
           @foreach($villes as $ville)
           @if($bricolor->ville_id == $ville->id)
-          <td>{{$ville->nom_ville}}</td>
+          <td class="th-info">{{$ville->nom_ville}}</td>
           @endif
           @endforeach
           @foreach($secteurs as $sector)
           @if($bricolor->secteur_id == $sector->id)
-          <td>{{$sector->nom_secteur}}</td>
+          <td class="th-info">{{$sector->nom_secteur}}</td>
           @endif
           @endforeach
           @foreach($users as $user)
           @if($bricolor->user_id == $user->id)
-          <td>{{$user->name}}</td>
+          <td class="th-info">{{$user->name}}</td>
           @endif
           @endforeach
-          <td>{{$bricolor->approuver}}</td>
-          <td><a type="button" class="btn btn-warning ml-auto" href="{{url('/bricoleur/'.$bricolor->id.'/edit')}}">Edit</a></td>
-          <td><form action="{{url('bricoleur/'.$bricolor->id)}}" method="post">
+          <td class="th-info">{{$bricolor->approuver}}</td>
+          <td class="th-info"><a type="button" class="btn btn-warning ml-auto" href="{{url('/bricoleur/'.$bricolor->id.'/edit')}}">Edit</a></td>
+          <td class="th-info"><form action="{{url('bricoleur/'.$bricolor->id)}}" method="post">
             @csrf
             @method('DELETE')
             <button class="btn btn-danger mx-2" type="submit">Delete</button>
           </form></td>
-
-
         </tr>
       </tbody>
       @endforeach
     </table>
 
-    <div class="text-center">
-      <a type="button" class="btn btnn bg-secondary mt-3 px-5" href="{{url('bricoleur/create')}}">Ajouter un bricoleur</a>
-    </div>
+    <!-- <div class="text-center">
+      <a type="button" class="btn btnn bg-secondary mt-3 px-5" href="{{url('bricoleur/create')}}">Add A New Handyman</a>
+    </div> -->
     <script src="{{ asset('js/secte.js') }}"></script>
   </body>
 </html>
