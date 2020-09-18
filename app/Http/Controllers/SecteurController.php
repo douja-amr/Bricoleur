@@ -14,7 +14,8 @@ class SecteurController extends Controller
      */
     public function index()
     {
-        //
+      $secteur = Secteur::all();
+      return view('/secteur.index',['secteur'=>$secteur]);
     }
 
     /**
@@ -24,7 +25,7 @@ class SecteurController extends Controller
      */
     public function create()
     {
-        //
+        return view('secteur/create');
     }
 
     /**
@@ -35,7 +36,11 @@ class SecteurController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $prmter = $request->except(['_token']);
+      $secteur = new Secteur();
+      $secteur->nom_secteur = $prmter['nom_secteur'];
+      $secteur->save();
+      return redirect('/secteur')->with('message', 'Add successfully');
     }
 
     /**
@@ -55,9 +60,10 @@ class SecteurController extends Controller
      * @param  \App\Secteur  $secteur
      * @return \Illuminate\Http\Response
      */
-    public function edit(Secteur $secteur)
+    public function edit( $id)
     {
-        //
+      $secteur = Secteur::find($id);
+      return view('secteur.edit',['secteur' => $secteur]);
     }
 
     /**
@@ -67,9 +73,14 @@ class SecteurController extends Controller
      * @param  \App\Secteur  $secteur
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Secteur $secteur)
+    public function update(Request $request, $id)
     {
-        //
+      $secteur = Secteur::find($id);
+
+      $secteur->nom_secteur = $request['nom_secteur'];
+      $secteur->save();
+
+      return redirect('/secteur');
     }
 
     /**
@@ -78,8 +89,10 @@ class SecteurController extends Controller
      * @param  \App\Secteur  $secteur
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Secteur $secteur)
+    public function destroy($id)
     {
-        //
+      $secteur = Secteur::find($id);
+      $secteur->delete();
+      return redirect('/secteur');
     }
 }

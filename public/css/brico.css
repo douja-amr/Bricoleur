@@ -1,0 +1,98 @@
+/* @import "bootstrap.min.css" */
+
+
+.bg{
+     background-image: url(../images/61.jpg);
+    background-size: cover;
+    margin-top: -63px;
+}
+.formul{
+    padding-bottom: 80px;
+}
+.titre{
+    color:  #fe5a0e !important;
+    margin-top: 60px;
+    padding-bottom: 30px;
+    padding-top: 52px;
+    font-size: 40px;
+}
+.input-group-text {
+    background: white;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    width: 110px;
+}
+.custom-file-input {
+    color: #9b9b9b;
+}
+.btn{
+    color: black;
+    background: #f4f4f4;
+    border: 1px solid lightgrey;
+}
+.btn:hover{
+    background: #ffffff !important;
+    color: black;
+    font-size: 16.5px;
+}
+/****************************************************/
+
+.text-secondary{
+    color: #fe5a0e !important;
+    padding-top: 10% !important;
+    text-decoration: underline;
+    text-decoration-color: #fe5a0e;
+    padding-bottom: 3% !important;
+}
+th {
+    font-size: 13px;
+}
+.btnn{
+    background-color: #fe5a0e !important;
+    margin-top: 80px!important;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.btnn:hover{
+    background-color: white!important;
+}
+
+/*****************ville****************/
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.container div {
+    margin-right: 84px;
+    line-height: -15px;
+    font-size: 30px;
+    border: none;
+    margin-left: 141px;
+}
+.container div {
+    width: 85px;
+    margin-right: 84px;
+    text-align: center;
+    line-height: -15px;
+    font-size: 33px;
+    border: none;
+    margin-left: 141px;
+    font-weight: 600;
+}
+a {
+    color: #009688;
+    border: 1px solid black;
+    padding: 7px;
+    background-color: white;
+}
+button, select {
+    text-transform: none;
+    color: red;
+    background-color: white;
+}
+/******************ville/create*****************/
+
+
