@@ -150,7 +150,7 @@ div:hover p {
     margin-bottom: 30px;
 }
 .bg-image {
-    background-image: url(../images/33.png);
+    background-image: url(../images/service/33.png);
     background-size: cover;
     height: 45rem;
     margin-bottom: 200px;
@@ -355,6 +355,21 @@ div:hover p {
     height: 38px!important;
     background-color: white!important;
     color: black!important;
+}
+.btn-outline-secondary {
+    color: #fe5a0e;
+    border-color: #fe5a0e;
+}
+.btn-outline-secondary:hover{
+    background-color:#f4f4f4!important;
+    color: #fe5a0e!important;
+}
+ .btn.btn-outline-secondary {
+    color: #fe5a0e!important;
+    border: 1px solid #fe5a0e!important;
+}
+.text-secondary {
+    color: #fe5a0e!important;
 }
 /*********************************************************/
 @media (min-width:992px) {

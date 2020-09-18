@@ -16,13 +16,11 @@
       <div class="input-group mx-auto" style="width: 500px; margin-top: 30vh">
       <input class="form-control form3" type="text" name="nom_ville" aria-describedby="button-addon2">
       <div class="input-group-append input3">
-        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Ajouter</button>
+      <a class="btn btn-outline-secondary" id="button-addon2" type="submit" href="{{url('bricoleur/create')}}">Add</a>
       </div>
     </form>
   </div>
-  <div class="text-center">
-      <a type="button" class="btn bg-secondary mt-3 px-5" href="{{url('bricoleur/create')}}">click to fill out the form</a>
-    </div>
+  
 
 </body>
 </html>

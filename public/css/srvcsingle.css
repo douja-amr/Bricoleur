@@ -10,6 +10,7 @@ body {
 }
 .py-4 {
     padding-top: 0rem!important;
+    margin-top: -30px;
 }
 
 a {
@@ -917,7 +918,7 @@ select {
 }
 
 .bg-img {
-    background-image: url(../images/3.jpg);
+    background-image: url(../images/service/service-3.jpg);
     position: relative;
     background-size:cover;
     background-position:center;
@@ -1258,7 +1259,7 @@ h6 {
 
 .page-title-layout6 .pagetitle__heading {
     font-size: 64px;
-    padding-top: 60%;
+    padding-top: 47%;
 }
 
 .page-title-layout7 {

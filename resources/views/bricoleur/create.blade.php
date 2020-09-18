@@ -9,31 +9,31 @@
 
   <body>
     <section class="bg">
-    <h2 class="text-secondary mb-3 text-center">Ajouter un Bricoleur</h2>
-    <form class="formul" action="{{url('/bricoleur')}}" method="post">
+    <h2 class="text-secondary mb-3 text-center">Add A Handyman</h2>
+    <form class="formul" action="{{url('/bricoleur')}}" method="post" enctype="multipart/form-data">
       @csrf
-      <div class="input-group mx-auto" style="width: 500px; ">
+      <div class="input-group mx-auto" style="width: 500px;">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Nom</span>
+            <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
           </div>
           <input type="text" class="form-control" value="" name="nom" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Prénom</span>
+            <span class="input-group-text" id="inputGroup-sizing-default">Last Name</span>
           </div>
           <input type="text" class="form-control" value="" name="prenom" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Téléphone</span>
+            <span class="input-group-text" id="inputGroup-sizing-default">phone</span>
           </div>
           <input type="text" class="form-control" name="telephone" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">C.I.N</span>
+            <span class="input-group-text" id="inputGroup-sizing-default">N.I.C</span>
           </div>
           <input type="text" class="form-control" name="CIN" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
@@ -54,7 +54,7 @@
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Ville</span>
+          <span class="input-group-text" id="inputGroup-sizing-default">City</span>
         </div>
         <select class="custom-select" name="ville_id">
           @foreach ($villes as $ville)
@@ -65,7 +65,7 @@
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Secteur</span>
+          <span class="input-group-text" id="inputGroup-sizing-default">category</span>
         </div>
         <select class="custom-select" name="secteur_id">
           @foreach ($secteurs as $sector)
@@ -86,15 +86,19 @@
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Approuver</span>
+          <span class="input-group-text" id="inputGroup-sizing-default">Approved</span>
         </div>
         <input type="text" class="form-control" name="approuver" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Ajouter</button>
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Add</button>
         </div>
       </div>
       </div>
-    </form>
+      <div class="add">
+          <a class="btn-add"type="button" href="{{url('ville/create')}}">Add A City</a>
+          <a class="btn-add"type="button" href="{{url('secteur/create')}}">Add A Category</a>
+    </div>
+    </form>  
   </section>
   </body>
 </html>

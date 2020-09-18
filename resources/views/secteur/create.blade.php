@@ -14,12 +14,11 @@
       <div class="input-group mx-auto" style="width: 500px; margin-top: 30vh">
       <input class="form-control form2" type="text" name="nom_secteur" aria-describedby="button-addon2">
       <div class="input-group-append input2">
-        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Ajouter</button>
+      <!-- <a href="{{url('bricoleur/create')}}">
+      <button class="btn btn-outline-secondary" type="submit">Ajouter</button> -->
+      <a class="btn btn-outline-secondary"type="submit" href="{{url('bricoleur/create')}}">Add</a>
       </div>
     </form>
   </div>
-  <div class="add">
-      <a class="btn-add" type="button"  href="{{url('ville/create')}}">click to add a city</a>
-    </div>
   </body>
 </html>

@@ -2,12 +2,12 @@
 
 
 .bg{
-     background-image: url(../images/61.jpg);
+     background-image: url(../images/service/61.jpg);
     background-size: cover;
     margin-top: -63px;
 }
 .formul{
-    padding-bottom: 80px;
+    padding-bottom: 5px;
 }
 .titre{
     color:  #fe5a0e !important;
@@ -38,12 +38,12 @@
 }
 /****************************************************/
 
-.text-secondary{
+.text-secondary {
     color: #fe5a0e !important;
-    padding-top: 10% !important;
+    padding-top: 3% !important;
     text-decoration: underline;
     text-decoration-color: #fe5a0e;
-    padding-bottom: 3% !important;
+    padding-bottom: 0% !important;
 }
 th {
     font-size: 13px;
@@ -54,6 +54,7 @@ th {
     font-size: 16px;
     font-weight: 600;
     color: white;
+    margin-bottom:100px!important;
 }
 .btnn:hover{
     background-color: white!important;
@@ -93,6 +94,76 @@ button, select {
     color: red;
     background-color: white;
 }
-/******************ville/create*****************/
+/******************City & Category *****************/
 
+
+.add{
+    background-color: #fe5a0e;
+    padding-bottom: 14px;
+    margin-bottom: 40px;
+    padding-top: 16px;
+    padding-left: 262px;
+    padding-right: -3px;
+    border-radius: 5px;
+    margin-left: 160px;
+    margin-right: 160px;
+    margin-top: 21px;
+    }
+.btn-add {
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+    margin-right: 115px;
+    width:158px;
+}
+
+/*******************Page brico create*******************/
+.brico-img {
+    width: 100px;
+    height: 110px;
+}
+.grid-brico{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(14, 1fr);
+}
+.bg-light {
+    background-color: #ffffff!important;
+    margin-left: 1.5%;
+    margin-bottom: 6%;
+}
+.table td, .table th {
+    /* padding: .75rem; */
+    vertical-align: middle;
+    border-top: 1px solid #fbfbfb;
+    background-color: #ffffff;
+    outline: auto;
+    outline-color: #fe5a0e85;
+    color: #695f5f;
+    font-size: small;
+    font-weight: 600;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgb(195 186 186);
+    text-align: center;
+    padding-top: -16px;
+}
+.table {
+    width: 88%;
+    margin-bottom: -30.1rem;
+    color: #212529;
+    margin-left: 4px;
+}
+.th-info{
+    padding-top: 4%;   
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    text-align: center;
+    color: white;
+    background-color: #fe5a0e;
+}
 

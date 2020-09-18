@@ -7,7 +7,7 @@
   </head>
   <body class="bg-light">
     <h2 class="text-secondary mb-3 text-center">Ajouter un Bricoleur</h2>
-    <form action="{{url('/bricoleur/'.$bricol->id)}}" method="post">
+    <form action="{{url('/bricoleur/'.$bricol->id)}}" method="post" enctype="multipart/form-data">
       @csrf
       @method('PUT')
       <div class="input-group mx-auto" style="width: 500px; ">
@@ -46,7 +46,7 @@
         <span class="input-group-text" id="inputGroupFileAddon01">Image</span>
       </div>
       <div class="custom-file">
-        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+        <input type="file" class="custom-file-input" name="image" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
         <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
       </div>
       </div>
