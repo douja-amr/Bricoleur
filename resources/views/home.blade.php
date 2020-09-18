@@ -1,4 +1,4 @@
-@extends('layouts.app')
+
 
 
 <!DOCTYPE html>
@@ -35,11 +35,7 @@
 </head>
 
 <body>
-  <!-- <div class="wrapper">
-    <div class="preloader">
-      <div class="loading"><span></span><span></span><span></span><span></span></div>
-    </div> -->
-    <!-- /.preloader -->
+ 
 
     <!-- =========================
         Header
@@ -50,7 +46,7 @@
           <a class="navbar-brand" href="index.html">
             <img  src="{{ asset('images/logo/logo5.png')}}"  class="logo-light" alt="logo">
            
-            <!-- <img src="{{ asset('images/logo/logoBri.jpg')}}" class="logo-dark" alt="logo"> -->
+          
           </a>
           <button class="navbar-toggler" type="button">
             <span class="menu-lines"><span></span></span>
@@ -60,92 +56,45 @@
               <li class="nav__item with-dropdown">
                 <a href="index.html" class="dropdown-toggle nav__item-link active">Home</a>
                 <i class="fa fa-angle-down" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="index.html" class="nav__item-link">Home Moderm</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="home-classic.html" class="nav__item-link">Home classic</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="home-architecture.html" class="nav__item-link">Home Architecture</a>
-                  </li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
+          
+              </li>
               <li class="nav__item with-dropdown">
                 <a href="about-us.html" class="dropdown-toggle nav__item-link">Company</a>
                 <i class="fa fa-angle-down" data-toggle="dropdown"></i>
                 <ul class="dropdown-menu">
                   <li class="nav__item"><a href="about-us.html" class="nav__item-link">About Us</a></li>
-                  <!-- /.nav-item -->
-                  
-                  <!-- /.nav-item -->
+                 
+                 
                   <li class="nav__item"><a href="faqs.html" class="nav__item-link">Help & FAQs</a></li>
-                  <!-- /.nav-item -->
+                 
                   
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
+                </ul>
+              </li>
               <li class="nav__item with-dropdown">
                 <a href="services.html" class="dropdown-toggle nav__item-link">Services</a>
                 <i class="fa fa-angle-down" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="#" class="nav__item-link">Construction
-                      Manage</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="#" class="nav__item-link">Construction
-                      Consultants</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="#" class="nav__item-link">Architecture &
-                      Building</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="#" class="nav__item-link">Home
-                      Renovations</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="#" class="nav__item-link">Tiling &
-                      Painiting</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="#" class="nav__item-link">Interior
-                      Design</a></li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
+                
+              </li>
               <li class="nav__item with-dropdown">
                 <a href="projects-grid.html" class="dropdown-toggle nav__item-link">Projects</a>
                 <i class="fa fa-angle-down" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="#" class="nav__item-link">projects grid</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="#" class="nav__item-link">projects standard</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item"><a href="#" class="nav__item-link">projects carousel</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item"><a href="#" class="nav__item-link">projects
-                      single</a></li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="blog.html" class="dropdown-toggle nav__item-link">News & Media</a>
-                <i class="fa fa-angle-down" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item">
-                    <a href="#" class="nav__item-link">Blog Grid</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="#" class="nav__item-link">Single Blog Post</a>
-                  </li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
+                
+              </li>
+            
               <li class="nav__item">
                 <a href="#" class="nav__item-link">Contacts</a>
-              </li><!-- /.nav-item -->
+              </li>
               
-            </ul><!-- /.navbar-nav -->
-          </div><!-- /.navbar-collapse -->
+            </ul>
+          </div>
           <div class="contact__number d-flex align-items-center">
             <i class="icon-phone"></i>
             <a href="tel:0677512233">06 775 12 233</a>
-          </div><!-- /.contact__numbr -->
-        </div><!-- /.container -->
-      </nav><!-- /.navabr -->
-    </header><!-- /.Header -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- /.Header -->
 
     <!-- ============================
         Slider
@@ -198,49 +147,8 @@
 
       </div>
   </section>
-    <!-- <section class="slider slider-layout1">
-      <div class="slick-carousel carousel-arrows-light m-slides-0"
-        data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear"}'>
-        <div class="slide-item align-v-h bg-overlay bg-overlay-2">
-          <div class="bg-img"><img src="{{ asset('images/sliders/2.jpg')}}" alt="background"></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9">
-                <div class="slide__content">
-                  <h2 class="slide__title">Provide Effective Building Solutions!</h2>
-                  <p class="slide__desc">A leading developer of A-grade commercial, industrial and residential projects
-                    in USA. Since its foundation the company has doubled its turnover year on year, with its staff
-                    numbers swelling accordingly. </p>
-                  <a href="services.html" class="btn btn__primary btn__icon btn__lg mr-30">
-                    <span>Our Services</span><i class="icon-arrow-right"></i>
-                  </a>
-                  <a href="about-us.html" class="btn btn__white">More About Us!</a> -->
-                </div><!-- /.slide-content -->
-              </div><!-- /.col-xl-9 -->
-            </div><!-- /.row -->
-          </div><!-- /.container -->
-        </div><!-- /.slide-item -->
-        <!-- <div class="slide-item align-v-h bg-overlay">
-          <div class="bg-img"><img src="{{ asset('images/sliders/2.jpg')}}" alt="slide img"></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9">
-                <div class="slide__content">
-                  <h2 class="slide__title">Bigger, Better, <br> Faster & Stronger</h2>
-                  <p class="slide__desc">A leading developer of A-grade commercial, industrial and residential projects
-                    in USA. Since its foundation the company has doubled its turnover year on year, with its staff
-                    numbers swelling accordingly. </p> -->
-                  <!-- <a href="services.html" class="btn btn__primary btn__icon btn__lg mr-30">
-                    <span>Our Services</span><i class="icon-arrow-right"></i>
-                  </a>
-                  <a href="about-us.html" class="btn btn__white">More About Us!</a> -->
-                </div><!-- /.slide-content -->
-              </div><!-- /.col-xl-9 -->
-            </div><!-- /.row -->
-          </div><!-- /.container -->
-        </div><!-- /.slide-item -->
-      </div><!-- /.carousel -->
-    </section><!-- /.slider -->
+ 
+                 
 
     <!-- ==========================
        Contact Info
@@ -248,7 +156,7 @@
     <section class="contact-info-layout2 pt-60 pb-30">
       <div class="container">
         <div class="row align-items-end">
-          <!-- Contact panel #1 -->
+          
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="contact-info-box d-flex align-items-center">
               <div class="contact__info-box-icon">
@@ -259,11 +167,12 @@
                 <ul class="contact__info-list list-unstyled">
                   <li>Email: <a href="#">Bricoleur@maroc.com</a></li>
                   <li>Phone: <a href="tel:0677512233">06 775 12 233</a></li>
-                </ul><!-- /.contact__info-list -->
-              </div><!-- /.contact__info-box-content -->
-            </div><!-- /.contact-info-box -->
-          </div><!-- /.col-lg-3 -->
-          <!-- Contact panel #2 -->
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+         
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="contact-info-box d-flex align-items-center">
               <div class="contact__info-box-icon">
@@ -273,11 +182,10 @@
                 <h4 class="contact__info-box-title">Our Location</h4>
                 <ul class="contact__info-list list-unstyled">
                   <li>2307 Agendis, youssoufia 11226 Morocco.</li>
-                </ul><!-- /.contact__info-list -->
-              </div><!-- /.contact__info-box-content -->
-            </div><!-- /.contact-info-box -->
-          </div><!-- /.col-lg-3 -->
-          <!-- Contact panel #3 -->
+                </ul>
+              </div>
+            </div>
+          </div>
           <div class="col-sm-12 col-md-12 col-lg-6">
             <div class="cta__banner">
               <h5 class="cta__title color-white">WELCOME TO Bricoleur COMMERCIAL AND DOMESTIC SPECIALISTS </h5>
@@ -286,11 +194,11 @@
               <a href="services.html" class="btn btn__primary btn__link color-white">
                 <span>Learn More</span> <i class="icon-arrow-right"></i>
               </a>
-            </div><!-- /.cta__banner -->
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.Contact Info -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ========================
         Services Layout 2
@@ -306,16 +214,16 @@
               <span class="heading__subtitle">The Best A Grade Commercial & Residential Services</span>
               <h2 class="heading__title">High Quality Construction Solutions
                 For Residentials & Industries!</h2>
-            </div><!-- /.heading -->
-          </div><!-- /.col-lg-10 -->
-        </div><!-- /.row -->
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-sm-12 col-md-4 col-lg-4">
             <div class="service-item">
               <div class="service__content">
                 <div class="service__icon">
                 <i class="icon-home"></i>
-                </div><!-- /.service__icon -->
+                </div>
                 <h4 class="service__title">Home Maintenance</h4>
                 <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -323,18 +231,18 @@
                   <span>Read More</span>
                   <i class="icon-arrow-right"></i>
                 </a>
-              </div><!-- /.service-content -->
+              </div>
               <div class="service__overlay bg-overlay bg-overlay-theme">
                 <div class="bg-img"><img src="{{ asset('images/services/service-overlay.png')}}" alt="background"></div>
-              </div><!-- /.service__overlay -->
-            </div><!-- /.service-item -->
-          </div><!-- /.col-lg-4 -->
+              </div>
+            </div>
+          </div>
           <div class="col-sm-12 col-md-4 col-lg-4">
             <div class="service-item">
               <div class="service__content">
                 <div class="service__icon">
                 <i class="icon-cogs"></i>
-                </div><!-- /.service__icon -->
+                </div>
                 <h4 class="service__title">Renovation</h4>
                 <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -342,18 +250,18 @@
                   <span>Read More</span>
                   <i class="icon-arrow-right"></i>
                 </a>
-              </div><!-- /.service-content -->
+              </div>
               <div class="service__overlay bg-overlay bg-overlay-theme">
                 <div class="bg-img"><img src="{{ asset('images/services/service-overlay.png')}}" alt="background"></div>
-              </div><!-- /.service__overlay -->
-            </div><!-- /.service-item -->
-          </div><!-- /.col-lg-4 -->
+              </div>
+            </div>
+          </div>
           <div class="col-sm-12 col-md-4 col-lg-4">
             <div class="service-item">
               <div class="service__content">
                 <div class="service__icon">
                 <i class="icon-wrench"></i>
-                </div><!-- /.service__icon -->
+                </div>
                 <h4 class="service__title">Plumbing services</h4>
                 <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -425,7 +333,7 @@
           </div><!-- /.col-xl-6 -->
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 background-banner">
             <div class="bg-img">
-              <img class=img-banner src="{{ asset('images/backgrounds/bcg3.jpg')}}" alt="banner">
+              <img class=img-banner src="{{ asset('images/backgrounds/project3.jpg')}}" alt="banner">
             
             </div><!-- /.video__box -->
           </div><!-- /.col-xl-6 -->
@@ -614,52 +522,7 @@
             </div><!-- /.col-lg-12 -->
           </div><!-- /.row -->
         </div><!-- /.container -->
-      </section><!-- /.contact layout 2 -->
-
-      <!-- ========================= 
-      Testimonials layout 1
-      =========================  -->
-      <!-- <section class="container__testemonial">
-    <div class="slider1">
-      <div class="slide1 slide-1">
-        <div class="slide-text">
-          <p class="testimonial-text">
-            “ I’ve been interested in coding for a while but never taken the jump, until now. 
-  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-  excited about the future. ”
-          </p>
-          <p class="author-text">Tanya Sinclair
-            <span>UX Engineer</span></p>
-        </div>
-        <div class="slide-img">
-          <img src="{{ asset('images/blog/blog-1.jpg')}}" alt="img">
-        </div>
-      </div>
-      <div class="slide1 slide-2">
-        <div class="slide-text">
-          <p class="testimonial-text">
-            “ If you want to lay the best foundation possible I’d recommend taking this course. 
-  The depth the instructors go into is incredible. I now feel so confident about 
-  starting up as a professional developer. ”
-          </p>
-          <p class="author-text">John Tarkpor
-            <span>Junior Front-end Developer</span></p>
-        </div>
-        <div class="slide-img">
-          <img src="{{ asset('images/blog/blog-1.jpg')}}" alt="img">
-        </div>
-      </div>
-      <div class="buttons">
-        <div class="next"></div>
-        <div class="prev"></div>
-      </div>
-    </div>
-  </section>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+      </section>
     <!-- ======================
       Blog 
     ========================= -->
@@ -736,7 +599,7 @@
               </div><!-- /.slick-carousel -->
             </div><!-- /.contact-info-carousel -->
             <div id="map" style="height: 460px;"></div>
-            <script src="assets/js/google-map.js"></script>
+            <script src="{{ asset('js/google-map.js') }}"></script>
             <script src="assets/js/google-map.js"></script>
             <script
               src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqrqPZOVegy1VIdyIcndxZY9YGoK-x0Yo&callback=initMap"
