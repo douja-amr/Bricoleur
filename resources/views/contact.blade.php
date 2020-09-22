@@ -1,6 +1,7 @@
 @extends('layouts.app')
+@extends('layouts.nav')
 
-@section('content')
+@section('contact')
 
 
 

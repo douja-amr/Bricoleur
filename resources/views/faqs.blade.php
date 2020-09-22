@@ -1,3 +1,8 @@
+@extends('layouts.app')
+@extends('layouts.nav')
+
+@section('faqs')
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,10 +18,7 @@
   </head>
   <body>
 
-    <div class="wrapper">
-        <div class="preloader">
-          <div class="loading"><span></span><span></span><span></span><span></span></div>
-        </div><!-- /.preloader -->
+    
       
         <!-- ======================
            FAQ
@@ -29,7 +31,7 @@
                   <div class="widget widget-help bg-theme">
                     <div class="widget__content">
                       <h5>Dedicated Customer Teams & Agile Services</h5>
-                      <p>Today Promin has over 4,000 professionals on its payroll All Over The World.</p>
+                      <p>Today Bricoleur has over 4,000 professionals on its payroll All Over The Country.</p>
                       <a href="request-quote.html" class="btn btn__white btn__link">
                         <span class="color-white">Get A Quote</span>
                       </a>
@@ -72,7 +74,7 @@
                     </div><!-- /.accordion-item-body -->
                   </div>
                 </div><!-- /.accordion-item -->
-                <div class="accordion-item opened">
+                <div class="accordion-item ">
                   <div class="accordion__item-header" data-toggle="collapse" data-target="#collapse3">
                     <a class="accordion__item-title" href="#">What is your goal for this site?</a>
                   </div><!-- /.accordion-item-header -->
@@ -127,3 +129,4 @@
           crossorigin="anonymous"></script>
   </body>
 </html>
+@endsection

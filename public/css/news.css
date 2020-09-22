@@ -43,8 +43,21 @@
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   }
   
-  @media only screen and (max-width: 600px) {
-    a.arrow__btn {
+
+
+  @media (max-width:767px) {
+    .wrapper section {
+      /* width: 100%;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      margin: 20px 0; */
+      display: none;
+    }
+  }
+  @media (max-width:589px) {
+  
+    .wrapper section {
       display: none;
     }
   }

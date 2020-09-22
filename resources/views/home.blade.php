@@ -1,6 +1,6 @@
 
 
-
+@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +26,7 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
+    
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
@@ -43,10 +44,9 @@
     <header class="header header-transparent header-layout1">
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="#">
             <img  src="{{ asset('images/logo/logo5.png')}}"  class="logo-light" alt="logo">
            
-          
           </a>
           <button class="navbar-toggler" type="button">
             <span class="menu-lines"><span></span></span>
@@ -54,35 +54,35 @@
           <div class="collapse navbar-collapse" id="mainNavigation">
             <ul class="navbar-nav">
               <li class="nav__item with-dropdown">
-                <a href="index.html" class="dropdown-toggle nav__item-link active">Home</a>
+                <a href="#" class="dropdown-toggle nav__item-link active">Home</a>
                 <i class="fa fa-angle-down" data-toggle="dropdown"></i>
           
               </li>
               <li class="nav__item with-dropdown">
-                <a href="about-us.html" class="dropdown-toggle nav__item-link">Company</a>
+                <a href="" class="dropdown-toggle nav__item-link">Company</a>
                 <i class="fa fa-angle-down" data-toggle="dropdown"></i>
                 <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="about-us.html" class="nav__item-link">About Us</a></li>
+                  <li  class="nav__item"><a href="{{url('/about')}}" class="nav__item-link">About Us</a></li>
                  
                  
-                  <li class="nav__item"><a href="faqs.html" class="nav__item-link">Help & FAQs</a></li>
-                 
+                  <li class="nav__item"><a href="{{url('/faqs')}}" class="nav__item-link">Help & FAQs</a></li>
+                  
                   
                 </ul>
               </li>
               <li class="nav__item with-dropdown">
-                <a href="services.html" class="dropdown-toggle nav__item-link">Services</a>
+                <a href="{{url('/secteur')}}" class="dropdown-toggle nav__item-link">Services</a>
                 <i class="fa fa-angle-down" data-toggle="dropdown"></i>
                 
               </li>
               <li class="nav__item with-dropdown">
-                <a href="projects-grid.html" class="dropdown-toggle nav__item-link">Projects</a>
+                <a href="{{url('#project')}}" class="dropdown-toggle nav__item-link">Projects</a>
                 <i class="fa fa-angle-down" data-toggle="dropdown"></i>
                 
               </li>
             
               <li class="nav__item">
-                <a href="#" class="nav__item-link">Contacts</a>
+                <a href="{{url('/contact')}}" class="nav__item-link">Contacts</a>
               </li>
               
             </ul>
@@ -91,7 +91,51 @@
             <i class="icon-phone"></i>
             <a href="tel:0677512233">06 775 12 233</a>
           </div>
+          
         </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <!-- <ul class="navbar-nav mr-auto">
+
+                    </ul> -->
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
       </nav>
     </header>
     <!-- /.Header -->
@@ -212,8 +256,8 @@
           <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
             <div class="heading text-center mb-40">
               <span class="heading__subtitle">The Best A Grade Commercial & Residential Services</span>
-              <h2 class="heading__title">High Quality Construction Solutions
-                For Residentials & Industries!</h2>
+              <h2 class="heading__title">High Quality Home Maintenance Solutions
+                For Residentials!</h2>
             </div>
           </div>
         </div>
@@ -295,10 +339,10 @@
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
             <div class="inner-padding bg-theme ">
               <div class="heading-layout2 heading-light mb-40">
-                <p class="heading__subtitle">World's Leading Industry Corporation!</p>
-                <h2 class="heading__title">Best A Gra de Commercial & Residential Services</h2>
+                <p class="heading__subtitle">World's Leading Servives Corporation!</p>
+                <h2 class="heading__title">Best Handyman Website Services</h2>
                 <p class="heading__desc">The world is changing faster than ever before, business is no exception, yet
-                  those that embrace change are thriving, building bigger, better, faster & stronger products than ever
+                  those that embrace change are thriving, building bigger, better, faster & stronger services than ever
                   before. We can help you build on your past and prepare for future.</p>
               </div><!-- /.heading -->
               <div class="row fancybox-light">
@@ -309,8 +353,8 @@
                       <i class="icon-welding"></i>
                     </div><!-- /.fancybox-icon -->
                     <div class="fancybox__content">
-                      <h4 class="fancybox__title">Powerfull Product<br> Strategy</h4>
-                      <p class="fancybox__desc">Our facilities meet high security requirements and are certified to the
+                      <h4 class="fancybox__title">Powerfull Services<br> Strategy</h4>
+                      <p class="fancybox__desc">Our facilities meet high services requirements and are certified to the
                         highest local standards.</p>
                     </div><!-- /.fancybox-content -->
                   </div><!-- /.fancybox-item -->
@@ -343,7 +387,7 @@
 
     
 <!-- Recent work section -->
-<section class="Client">
+<section id=project class="Client">
 <span class="heading__subtitle">Featured Projects</span>
 <h2 class="heading__title">Our Recent Works</h2>
     <div class="wrapper">
@@ -700,9 +744,9 @@
   </div><!-- /.wrapper -->
 
                       <script src="{{ asset('js/slider.js') }}"></script>
-                      <script src="{{ asset('js/news.js') }}"></script>
+                      <!-- <script src="{{ asset('js/news.js') }}"></script>
                       <script src="{{ asset('js/Testemonial.js') }}"></script>
-                      <script src="{{ asset('js/google-map.js') }}"></script>
+                      <script src="{{ asset('js/google-map.js') }}"></script> -->
                     
               
 </body>
